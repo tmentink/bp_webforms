@@ -1,0 +1,110 @@
+﻿// ===========================================
+// Breakpoints
+// ===========================================
+
+    // Min Width
+    // ===========================================
+    @mixin bp-min-width-sm {
+        @media all and (min-width: em(576px)) {
+            @content;
+        }
+    }
+
+    @mixin bp-min-width-md {
+        @media all and (min-width: em(768px)) {
+            @content;
+        }
+    }
+
+    @mixin bp-min-width-lg {
+        @media all and (min-width: em(992px)) {
+            @content;
+        }
+    }
+
+    @mixin bp-min-width-xl {
+        @media all and (min-width: em(1200px)) {
+            @content;
+        }
+    }
+
+    @mixin bp-min-width($value) {
+        @media all and (min-width: em($value)) {
+            @content;
+        }
+    }
+
+
+    // Max Width
+    // ===========================================
+    @mixin bp-max-width-xs {
+        @media all and (max-width: em(575px)) {
+            @content;
+        }
+    }
+
+    @mixin bp-max-width-sm {
+        @media all and (max-width: em(767px)) {
+            @content;
+        }
+    }
+
+    @mixin bp-max-width-md {
+        @media all and (max-width: em(991px)) {
+            @content;
+        }
+    }
+
+    @mixin bp-max-width-lg {
+        @media all and (max-width: em(1199px)) {
+            @content;
+        }
+    }
+
+    @mixin bp-max-width($value) {
+        @media all and (max-width: em($value)) {
+            @content;
+        }
+    }
+
+
+    // Only Single Size
+    // ===========================================
+    @mixin bp-only-xs {
+        @media all and (max-width: em(575px)) {
+            @content;
+        }
+    }
+
+    @mixin bp-only-sm {
+        @media all and (min-width: em(576px)) and (max-width: em(767px)) {
+            @content;
+        }
+    }
+
+    @mixin bp-only-md {
+        @media all and (min-width: em(768px)) and (max-width: em(991px)) {
+            @content;
+        }
+    }
+
+    @mixin bp-only-lg {
+        @media all and (min-width: em(992px)) and (max-width: em(1199px)) {
+            @content;
+        }
+    }
+
+    @mixin bp-only-xl {
+        @media all and (min-width: em(1200px)) {
+            @content;
+        }
+    }
+
+
+    // Between
+    // ===========================================
+    @mixin bp-between($min, $max) {
+        @media all and (min-width: em($min)) and (max-width: em($max)) {
+            @content;
+        }
+    }

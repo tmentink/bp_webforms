@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Website", "Website", "{6DF195CC-DAB5-4D58-91B4-8E242BCE9F13}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.1"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_51233"
+		Debug.AspNetCompiler.PhysicalPath = "Website\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_51233\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_51233"
+		Release.AspNetCompiler.PhysicalPath = "Website\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_51233\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "51233"
+	EndProjectSection
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Database", "Database\Database.sqlproj", "{9E26B538-8B95-4764-A825-C3A1559F5846}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6DF195CC-DAB5-4D58-91B4-8E242BCE9F13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DF195CC-DAB5-4D58-91B4-8E242BCE9F13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DF195CC-DAB5-4D58-91B4-8E242BCE9F13}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DF195CC-DAB5-4D58-91B4-8E242BCE9F13}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{9E26B538-8B95-4764-A825-C3A1559F5846}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E26B538-8B95-4764-A825-C3A1559F5846}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E26B538-8B95-4764-A825-C3A1559F5846}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{9E26B538-8B95-4764-A825-C3A1559F5846}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E26B538-8B95-4764-A825-C3A1559F5846}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E26B538-8B95-4764-A825-C3A1559F5846}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

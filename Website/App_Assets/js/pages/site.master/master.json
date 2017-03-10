@@ -1,0 +1,15 @@
+﻿{
+  "src": [  "App_Assets/js/vendor/jquery/jquery-3.1.1.js",
+            "App_Assets/js/vendor/jquery/jquery.ajax-helper.js",
+            "App_Assets/js/vendor/jquery/jquery.extensions.js",
+            "App_Assets/js/vendor/spin-2.3.2.js",
+            "App_Assets/js/vendor/tether-1.3.3.js",
+            "App_Assets/js/vendor/bootstrap-4.0.0-alpha.6.js",
+            "App_Assets/js/vendor/velocity-1.3.2.js",
+            "App_Assets/js/base/utility.js",
+            "App_Assets/js/base/breakpoints.js",
+            "App_Assets/js/pages/site.master/**/*.js",
+            "!App_Assets/js/pages/site.master/init.js",
+            "App_Assets/js/pages/site.master/init.js"
+         ]
+}

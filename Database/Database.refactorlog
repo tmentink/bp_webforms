@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="3df8ba72-717b-44a0-87b0-6745575c1520" ChangeDateTime="02/10/2017 22:58:45">
+    <Property Name="ElementName" Value="[admin].[Users].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[admin].[Users]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="UserID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="488ce33c-3f5b-4204-952b-54803ed49f3b" ChangeDateTime="02/12/2017 02:49:24">
+    <Property Name="ElementName" Value="[admin].[PasswordResetRequests].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[admin].[PasswordResetRequests]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="RequestToken" />
+  </Operation>
+</Operations>

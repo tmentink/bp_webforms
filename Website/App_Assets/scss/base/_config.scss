@@ -1,0 +1,47 @@
+﻿// ===========================================
+// Global Config
+// ===========================================
+
+// Font
+// ===========================================
+    // Google Font URL
+    $font-url--google        : "http://fonts.googleapis.com/css?family=Lato:400,400i,700|Neuton:700";
+
+    // Font Families
+    $font-family--primary    : "Lato", "Helevtica Neue", Helvetica, Arial, sans-serif;
+    $font-family--secondary  : "Neuton", serif;
+
+    // Font Size
+    $font-size--base         : 16px;
+    $line-height--base       : 22px;
+
+
+// Color
+// ===========================================
+    // Base Colors
+    $black                   : #000;
+    $grey                    : #808080;
+    $white                   : #FFF;
+
+    // Bootstrap Theme Colors  
+    $alabaster               : #F7F7F7;   // white
+    $fern                    : #5CB85C;   // green
+    $roman                   : #D9534F;   // red
+    $sandy-brown             : #F0AD4E;   // orange
+    $sciene-blue             : #0275D8;   // blue
+    $shark                   : #292B2C;   // black
+    $viking                  : #5BC0DE;   // light blue
+  
+    // Color Usage
+    $color--black            : $black;
+    $color--grey             : $grey;
+    $color--white            : $white;
+    $color--background       : $alabaster;
+    $color--text             : $shark;
+
+    // Bootstrap 
+    $color--primary          : $sciene-blue;
+    $color--success          : $fern;
+    $color--info             : $viking;
+    $color--warning          : $sandy-brown;
+    $color--danger           : $roman; 

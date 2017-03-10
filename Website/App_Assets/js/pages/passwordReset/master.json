@@ -1,0 +1,8 @@
+﻿{
+  "src": [  "App_Assets/ajax/passwordReset.js",
+            "App_Assets/js/modules/passwordValidation.js",
+            "App_Assets/js/pages/passwordReset/**/*.js",
+            "!App_Assets/js/pages/passwordReset/init.js",
+            "App_Assets/js/pages/passwordReset/init.js"
+         ]
+}

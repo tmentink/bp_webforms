@@ -1,0 +1,85 @@
+﻿
+// ===========================================
+// Form
+// ===========================================
+    
+// Variables
+// ===========================================
+    $form--color                : $color--background   !default;
+    $form--width                : rem(320px)           !default;
+    $form--border-size          : rem(2px)             !default;
+    $form--border-radius        : rem(10px)            !default;
+    $form__circle--color        : $color--primary      !default;            
+    $form__circle--size         : rem(60px)            !default;
+    $form__circle--font-size    : rem(28px)            !default;
+    $form__header--font-size    : rem(22px)            !default;
+
+
+// Structure
+// ===========================================
+    .form {
+        padding: rem(50px) rem(35px);
+        border: $form--border-size solid transparent;
+        border-radius: $form--border-radius;
+        width: $form--width;
+        max-width: 90%;
+        position: relative;
+        text-align: center;
+        
+        @include placeholders {
+            text-align: center;
+        }
+    }
+
+    .form--centered {
+        @include absolute-center;
+    }
+
+    .form__circle {
+        @include circle($form__circle--size);
+        position: absolute;
+        top: 0;
+        left: 50%;
+        @include transform(translate(-50%,-50%));
+
+        .fa {
+            @include absolute-center;
+            font-size: $form__circle--font-size;
+        }
+    }
+
+    .form__header {
+        margin-bottom: rem(20px);
+    }
+
+    .form__alert {
+        margin: 0 rem(-20px) rem(20px);
+    }
+   
+    .form__link {
+        cursor: pointer;
+    }
+
+
+// Font
+// ===========================================
+    .form__header {
+        font-size: $form__header--font-size;
+    }
+
+
+// Color
+// ===========================================
+    .form {
+        background: $form--color;
+        border-color: darken($form--color, 10%);
+    }
+
+    .form__circle {
+        background: $form__circle--color;
+
+        .fa {
+            color: $form--color;
+        }
+    }
+

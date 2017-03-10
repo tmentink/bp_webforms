@@ -1,0 +1,34 @@
+﻿// ===========================================
+// Utilities
+// ===========================================
+
+
+// Unit Calculations
+// ===========================================
+  // calculate em values
+    @function em($target: $font-size--base, $context: $font-size--base) {
+        @return ($target / $context) * 1em;
+    }
+
+    // calculate rem values
+    @function rem($target: $font-size--base, $context: $font-size--base) {
+        @return ($target / $context) * 1rem;
+    }
+
+
+    @function strip-unit($number) {
+        @if type-of($number) == 'number' and not unitless($number) {
+            @return $number / ($number * 0 + 1);
+        }
+
+        @return $number;
+    }
+
+
+// Font
+// ===========================================
+   // unitless line height
+    @function lh($context, $font-size: $font-size--base) {
+        @return strip-unit($context / $font-size);
+    }
+  

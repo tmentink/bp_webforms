@@ -1,0 +1,100 @@
+﻿
+// ===========================================
+// Header
+// ===========================================
+    
+// Variables
+// ===========================================
+    $header--height            : 50px;
+    $header--font-size         : 20px; 
+    $header--border-size       : 1px;
+
+
+// Structure
+// ===========================================
+    .header {       
+        display: block;
+        height: $header--height ;
+        padding: 0 rem(15px);
+        position: relative;
+        border-bottom: rem($header--border-size) solid rgba($color--black, 0.1);
+    }
+
+    .header__title {
+        display: inline-block;
+    }
+
+    .header__icon,
+    .header__icon--right,
+    .header__icon--left {       
+        display: inline-block;
+        width: rem($header--height ); 
+        position: absolute;
+        border-left: rem($header--border-size) solid rgba($color--black, 0.1);     
+        text-align: center;
+        cursor: pointer;        
+    }
+
+    .header__icon--right {
+        right: 0;
+    }
+
+    .header__icon--left {
+        left: 0;
+    }
+
+    .header__icon--hidden {
+        visibility: hidden;
+    }
+
+
+// Font
+// ===========================================
+    .header__title {
+        font-size: rem($header--font-size);
+        line-height: lh($header--height , $header--font-size);
+    }
+
+    .header__icon,
+    .header__icon--right,
+    .header__icon--left {
+        font-size: rem($header--font-size);
+        line-height: lh($header--height  - ($header--border-size), $header--font-size);
+    }
+
+
+// Color
+// ===========================================
+    @mixin header__icon-color ($color) {
+        @include transition("color", 0.2s);
+
+        &:hover {
+            color: $color;
+        }
+
+        &:active {
+            color: darken($color, 10%);          
+        }
+    }
+
+
+    .header__icon--primary {
+        @include header__icon-color($color--primary)
+    }
+
+    .header__icon--info {
+        @include header__icon-color($color--info)
+    }
+
+    .header__icon--success {
+        @include header__icon-color($color--success)
+    }
+
+    .header__icon--warning {
+        @include header__icon-color($color--warning)
+    }
+
+    .header__icon--danger {
+        @include header__icon-color($color--danger)
+    }
+

@@ -1,0 +1,7 @@
+﻿{
+  "src": [  "App_Assets/ajax/login.js",
+            "App_Assets/js/pages/login/**/*.js",
+            "!App_Assets/js/pages/login/init.js",
+            "App_Assets/js/pages/login/init.js"
+         ]
+}
