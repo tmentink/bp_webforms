@@ -10,11 +10,11 @@
 	overlay.spinner;
 
 	var showLoadingOverlay = function () {
-		var wrapper = $cache("#loading__wrapper");
+		var loader = $cache("#loader");
 
-		if (wrapper.is(":visible")) { return; }
+		if (loader.is(":visible")) { return; }
 
-		wrapper.css("display", "block");
+		loader.css("display", "block");
 		var options = {
 			lines: 12,
 			length: 25,
@@ -33,12 +33,12 @@
 		}
 
 		// create new spinner and store a reference
-		overlay.target = $cache("#loading__img")[0];
+		overlay.target = $cache(".loader__img", $cache("#loader"))[0];
 		overlay.spinner = new Spinner(options).spin(overlay.target);
 	};
 
 	var hideLoadingOverlay = function () {
-		$cache("#loading__wrapper").css("display", "none");
+		$cache("#loader").css("display", "none");
 
 		// stop the spinner if one exists
 		if (overlay.spinner instanceof Spinner) {
