@@ -18,6 +18,15 @@ Public Class ServerVariables
         Return HttpContext.Current.Request.ServerVariables("HTTP_HOST")
     End Function
 
+    Public Shared Function GetPageName(Optional ByVal withExtension As Boolean = True) As String
+        Dim url = HttpContext.Current.Request.ServerVariables("URL")
+        If withExtension Then
+            Return IO.Path.GetFileName(url)
+        Else
+            Return IO.Path.GetFileNameWithoutExtension(url)
+        End If
+    End Function
+
     Public Shared Function GetPhysicalPath() As String
         Return HttpContext.Current.Request.ServerVariables("APPL_PHYSICAL_PATH")
     End Function

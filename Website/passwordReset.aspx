@@ -6,6 +6,9 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="cphBody" Runat="Server">   
     <div class="container-fluid">                        
+        
+        <!-- Password Form
+        ===========================================-->
         <div id="password-form" class="form form--centered fade collapse show">
             <div class="form__header">
                 <asp:Literal runat="server" Text="<%$ Resources:passwordReset, CreateNewPassword %>"></asp:Literal>
@@ -33,6 +36,7 @@
                 <asp:HyperLink ID="btnResetPassword" runat="server" class="btn btn-primary text-white form__button" Text="<%$ Resources:passwordReset, CreateNewPassword %>" tabindex="0"></asp:HyperLink>
             </div>
         </div>
+
     </div>
 </asp:Content>
 

@@ -4,9 +4,9 @@
     <link type="text/css" rel="Stylesheet" href="css/login.min.css" />
 </asp:Content>
 
-<asp:Content ID="Content2" ContentPlaceHolderID="cphBody" Runat="Server">   
-    <div class="container-fluid">                        
-        
+<asp:Content ID="Content2" ContentPlaceHolderID="cphBody" Runat="Server">       
+    <div class="container-fluid"> 
+
         <!-- Login Form
         ===========================================-->
         <div id="login-form" class="form form--centered fade collapse show">
@@ -55,6 +55,7 @@
 
             <asp:HyperLink ID="btnBackToLogin" runat="server" class="form__link text-muted" tabindex="0" Text="<%$ Resources:login, BackToLogin %>"></asp:HyperLink>            
         </div>
+
     </div>
 </asp:Content>
 

@@ -6,7 +6,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="cphBody" Runat="Server">
 
     <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
-
+    
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="cphScripts" Runat="Server">

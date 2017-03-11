@@ -5,9 +5,12 @@
     
 // Variables
 // ===========================================
-    $header--height            : 50px;
-    $header--font-size         : 20px; 
-    $header--border-size       : 1px;
+    $header--background        : lighten($color--text, 10%)     !default;
+    $header--color             : $color--white                  !default;
+    $header--font-size         : 20px                           !default; 
+    $header--height            : 50px                           !default;
+    $header--border-color      : $color--white                  !default;
+    $header--border-size       : 1px                            !default;
 
 
 // Structure
@@ -15,32 +18,33 @@
     .header {       
         display: block;
         height: $header--height ;
-        padding: 0 rem(15px);
         position: relative;
-        border-bottom: rem($header--border-size) solid rgba($color--black, 0.1);
+        border-bottom: rem($header--border-size) solid;
+        @include clearfix;
     }
 
     .header__title {
         display: inline-block;
+        margin-left: rem(15px);
     }
 
     .header__icon,
     .header__icon--right,
     .header__icon--left {       
         display: inline-block;
-        width: rem($header--height ); 
-        position: absolute;
-        border-left: rem($header--border-size) solid rgba($color--black, 0.1);     
+        width: rem($header--height);                   
         text-align: center;
         cursor: pointer;        
     }
 
     .header__icon--right {
-        right: 0;
+        border-left: rem($header--border-size) solid;
+        float: right;
     }
 
     .header__icon--left {
-        left: 0;
+        border-right: rem($header--border-size) solid;  
+        float: left;
     }
 
     .header__icon--hidden {
@@ -65,36 +69,15 @@
 
 // Color
 // ===========================================
-    @mixin header__icon-color ($color) {
-        @include transition("color", 0.2s);
-
-        &:hover {
-            color: $color;
-        }
-
-        &:active {
-            color: darken($color, 10%);          
-        }
+    .header {
+        background: $header--background;
+        border-color: $header--border-color ;
+        color: $header--color;
     }
 
-
-    .header__icon--primary {
-        @include header__icon-color($color--primary)
-    }
-
-    .header__icon--info {
-        @include header__icon-color($color--info)
-    }
-
-    .header__icon--success {
-        @include header__icon-color($color--success)
-    }
-
-    .header__icon--warning {
-        @include header__icon-color($color--warning)
-    }
-
-    .header__icon--danger {
-        @include header__icon-color($color--danger)
+    .header__icon,
+    .header__icon--right,
+    .header__icon--left {
+        border-color: $header--border-color ;
     }
 

@@ -38,6 +38,14 @@
         border-radius: 50%;
     }
 
+    @mixin clearfix {
+      &::after {
+        display: block;
+        content: "";
+        clear: both;
+      }
+    }
+
 
 // Vendor Prefixes
 // ===========================================
