@@ -1,0 +1,108 @@
+﻿
+// ===========================================
+// Input
+// ===========================================
+    
+// Variables
+// ===========================================
+    $input--border-color        : rgba($color--text, .2)        !default;
+    $input--border-size         : 1px                           !default;         
+    $input--focus-color         : $color--primary               !default;
+    $input--focus-easing        : cubic-bezier(.25,.8,.25,1)    !default;    
+    $input--font-size           : 16px                          !default;
+    $input--height              : ($input--font-size * 1.875)   !default;
+    $input--padding             : 2px                           !default;
+      
+    $input__label--color        : lighten($color--text, 25%)    !default; 
+        
+
+// Input Container
+// ===========================================
+    .input-container {
+        position: relative;              
+    }
+
+
+// Input
+// ===========================================
+    .input {
+        // Structure
+        display: block;
+        padding: rem($input--padding);
+        border: none;
+        border-bottom: rem($input--border-size) solid transparent;
+        height: rem($input--height);            
+        width: 100%;
+           
+        // Font
+        font-size: rem($input--font-size);
+        line-height: lh($input--height - ($input--border-size), $input--font-size);
+
+        // Color
+        background: transparent;
+        border-color: $input--border-color; 
+            
+        &:focus {
+            outline: none;
+        }                    
+    }
+
+
+// Input Label
+// ===========================================
+    .input__label {
+        // Structure
+        position: absolute;
+        top: rem($input--height * .133);
+        left: rem($input--padding);
+        width: 100%;
+        pointer-events: none;
+        @include truncate;
+
+        // Font
+        font-size: rem($input--font-size);
+        font-weight: normal;        
+
+        // Color
+        color: $input__label--color; 
+       
+        // Effects
+        .input:focus ~ &,
+        .input.used ~ & {
+            top: rem($input--height * -.667);
+            font-size: rem($input--font-size * .875);
+        }
+
+        .input:focus ~ & {
+            color: $input--focus-color;
+        }
+
+        @include transition("top, font-size", .4s, $input--focus-easing );
+    }
+
+
+// Input Bar
+// ===========================================
+    .input__bar {
+        position:relative; 
+        display:block;
+        width: 100%;
+
+        &:before {
+            // Structure
+            content:'';
+            position: absolute;
+            bottom: rem(1px); 
+            height: rem(2px); 
+            width: 0; 
+            
+            // Color                                      
+            background: $input--focus-color;
+
+            // Effects
+            .input:focus ~ & {
+                width: 100%;
+            }
+        }
+    }
+

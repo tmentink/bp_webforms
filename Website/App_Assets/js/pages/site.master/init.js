@@ -5,6 +5,19 @@
 !(function (window) {
 	"use strict";
 
+    // Inputs
+    // =======================================
+	$cache("body").on("blur", ".input", function () {
+	    var input = $(this);
+	    if (input.val()) {
+	        input.addClass("used");
+	    }
+	    else {
+	        input.removeClass("used");
+	    }
+	});
+
+
 	// Ajax Timers
 	// =======================================
 	var ajax = {};
