@@ -5,45 +5,44 @@
     
 // Variables
 // ===========================================
-    $footer--background        : transparent                    !default;
-    $footer--color             : $color--text                   !default;
-    $footer--font-size         : 16px                           !default; 
-    $footer--height            : 50px                           !default;
-    $footer--border-color      : rgba($color--text, .2)         !default;
-    $footer--border-size       : 1px                            !default;
+    $footer--background         : transparent                   !default;
+    $footer--color              : $color--text                  !default;
+    $footer--font-size          : 16px                          !default; 
+    $footer--height             : 50px                          !default;
+    $footer--border-color       : rgba($color--text, .2)        !default;
+    $footer--border-size        : 1px                           !default;
 
 
-// Structure
+// Footer
 // ===========================================
     .footer {       
+        // Structure
         display: block;
-        height: $footer--height ;
+        height: rem($footer--height);
         border-top: rem($footer--border-size) solid;
         @include clearfix;
-    }
 
-    .footer__copyright {
-        display: block;
-        text-align: center;
-        margin: 0 auto;
-    }
-
-
-// Font
-// ===========================================
-    .footer {
+        // Font
         font-size: rem($footer--font-size);
         line-height: lh($footer--height , $footer--font-size);
-    }
 
-
-// Color
-// ===========================================
-    .footer {
+        // Color
         background: $footer--background;
-        border-color: $footer--border-color ;
+        border-color: $footer--border-color;
         color: $footer--color;
     }
+
+
+// Footer Copyright
+// ===========================================
+    .footer__copyright {
+        display: block;       
+        margin: 0 auto;
+        text-align: center;
+    }
+
+
+
 
 
 

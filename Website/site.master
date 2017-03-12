@@ -13,24 +13,26 @@
     <asp:ContentPlaceHolder id="cphHead" runat="server"></asp:ContentPlaceHolder>
 </head>
 <body>
-    <form id="form1" runat="server">        
+    <form id="form1" runat="server">               
         <!-- Header
         ===========================================-->
         <div id="header" class="header" runat="server">
             <span id="headerTitle" class="header__title" runat="server"></span>
             <span id="btnMainMenu" class="header__icon--right"><i class="fa fa-bars"></i></span>
         </div>
-           
-                    
-        <asp:ContentPlaceHolder id="cphBody" runat="server"></asp:ContentPlaceHolder> 
+        
+
+        <div class="container-fluid">                                      
+            <asp:ContentPlaceHolder id="cphBody" runat="server"></asp:ContentPlaceHolder> 
 
 
-        <!-- Footer
-        ===========================================-->
-        <footer id="footer" class="footer" runat="server">
-            <span id="copyright" class="footer__copyright" runat="server"></span>
-        </footer>  
-
+            <!-- Footer
+            ===========================================-->
+            <footer id="footer" class="footer" runat="server">
+                <span id="copyright" class="footer__copyright" runat="server"></span>
+            </footer>
+        </div>
+          
 
         <!-- Loader
         ===========================================-->

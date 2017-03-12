@@ -5,36 +5,58 @@
     
 // Variables
 // ===========================================
-    $header--background        : lighten($color--text, 10%)     !default;
-    $header--color             : $color--white                  !default;
-    $header--font-size         : 20px                           !default; 
-    $header--height            : 50px                           !default;
-    $header--border-color      : $color--white                  !default;
-    $header--border-size       : 1px                            !default;
+    $header--background         : lighten($color--text, 10%)    !default;
+    $header--border-color       : $color--white                 !default;
+    $header--border-size        : 1px                           !default;
+    $header--color              : $color--white                 !default;
+    $header--font-size          : 20px                          !default; 
+    $header--height             : 50px                          !default;
+    
 
-
-// Structure
+// Header
 // ===========================================
-    .header {       
-        display: block;
-        height: $header--height ;
-        position: relative;
+    .header { 
+        // Structure      
+        height: rem($header--height);
         border-bottom: rem($header--border-size) solid;
         @include clearfix;
+
+        // Color
+        background: $header--background;
+        border-color: $header--border-color;
+        color: $header--color;
     }
 
+
+// Header Title
+// ===========================================
     .header__title {
+        // Structure
         display: inline-block;
         margin-left: rem(15px);
+
+        // Font
+        font-size: rem($header--font-size);
+        line-height: lh($header--height, $header--font-size);
     }
 
+// Header Icon
+// ===========================================   
     .header__icon,
     .header__icon--right,
     .header__icon--left {       
+        // Structure
         display: inline-block;
         width: rem($header--height);                   
         text-align: center;
-        cursor: pointer;        
+        cursor: pointer;  
+        
+        // Font 
+        font-size: rem($header--font-size);
+        line-height: lh($header--height - $header--border-size, $header--font-size);
+        
+        // Color
+        border-color: $header--border-color; 
     }
 
     .header__icon--right {
@@ -49,35 +71,5 @@
 
     .header__icon--hidden {
         visibility: hidden;
-    }
-
-
-// Font
-// ===========================================
-    .header__title {
-        font-size: rem($header--font-size);
-        line-height: lh($header--height , $header--font-size);
-    }
-
-    .header__icon,
-    .header__icon--right,
-    .header__icon--left {
-        font-size: rem($header--font-size);
-        line-height: lh($header--height  - ($header--border-size), $header--font-size);
-    }
-
-
-// Color
-// ===========================================
-    .header {
-        background: $header--background;
-        border-color: $header--border-color ;
-        color: $header--color;
-    }
-
-    .header__icon,
-    .header__icon--right,
-    .header__icon--left {
-        border-color: $header--border-color ;
     }
 

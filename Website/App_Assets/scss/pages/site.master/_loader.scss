@@ -3,26 +3,39 @@
 // Loader
 // ===========================================
 
-// Structure
+// Variables
+// ===========================================
+    $loader--background         : #666 url("../images/loader-bg.png")   !default;
+    $loader--opacity            : 0.5                                   !default;
+    $loader--z-index            : 9999                                  !default;
+
+
+// Loader
 // ===========================================	
     .loader {
-        display: none;
+        display: none;       
+    }
 
-        .loader__overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
-            background: #666666 url("../images/ui-bg_diagonals-thick_20_666666_40x40.png");
-            opacity: 0.5;
-            z-index: 2000;
-        }
 
-        .loader__img {          
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            z-index: 2000;
-        }
+// Loader Overlay
+// ===========================================	
+    .loader__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: $loader--background;
+        opacity: $loader--opacity;
+        z-index: $loader--z-index;
+    }
+
+
+// Loader Image
+// ===========================================	
+    .loader__img {          
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: $loader--z-index;
     }

@@ -21,6 +21,7 @@
     // Base Colors
     $black                   : #000;
     $grey                    : #808080;
+    $light-grey              : #EEE;
     $white                   : #FFF;
 
     // Bootstrap Theme Colors  
@@ -36,7 +37,8 @@
     $color--black            : $black;
     $color--grey             : $grey;
     $color--white            : $white;
-    $color--background       : $alabaster;
+    $color--off-white        : $alabaster;
+    $color--background       : $light-grey;
     $color--text             : $shark;
 
     // Bootstrap 

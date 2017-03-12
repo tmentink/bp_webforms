@@ -7,8 +7,7 @@ Partial Class site
         If GetFilePath() = "/login.aspx" OrElse
            GetFilePath() = "/passwordReset.aspx" Then
 
-            header.Visible = False
-            footer.Visible = False
+            HideHeaderAndFooter()
         Else
             Admin.Login.VerifyLogin()
             InitHeader()
@@ -23,6 +22,11 @@ Partial Class site
 
     'Private Subs & Functions
     '-------------------------------------------
+    Private Sub HideHeaderAndFooter()
+        header.Attributes.CssStyle.Add("visibility", "hidden")
+        footer.Attributes.CssStyle.Add("visibility", "hidden")
+    End Sub
+
     Private Sub InitHeader()
         Dim pageName = GetPageName(withExtension:=False)
         headerTitle.InnerHtml = pageName.Substring(0, 1).ToUpper() + pageName.Substring(1)

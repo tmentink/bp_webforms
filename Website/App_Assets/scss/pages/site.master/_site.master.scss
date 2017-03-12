@@ -8,24 +8,26 @@
     }
 
 
-// Structure
-// ===========================================	
-
-
-// Font
-// ===========================================	   
+// HTML / Body
+// ===========================================
     html,
     body {
+        // Font
         font-family: $font-family--primary;
         font-size: $font-size--base;
-        line-height: ($line-height--base / $font-size--base); 
-    }
+        line-height: ($line-height--base / $font-size--base);
+        -webkit-font-smoothing: antialiased; 
 
-
-// Color
-// ===========================================	
-    html,
-    body {
+        // Color
         background: $color--background;
         color: $color--text;
     }
+
+
+// Container
+// ===========================================	
+    .container-fluid {
+        height: calc(100vh - (#{$header--height} + #{$header--border-size}));
+        overflow: auto;
+    }
+
